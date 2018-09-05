@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Resaka KPI</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script>
+      
+
+      function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+// query string: ?foo=lorem&bar=&baz
+var div = getParameterByName('div'); // "lorem"
+var kpi = getParameterByName('kpi'); // "" (present with empty value)
+var output = getParameterByName('output'); // "" (present with no value)
+var labourProd = getParameterByName('labourProd'); // null (absent)
+
+console.log(div);
+
+function goBack() {
+                    window.history.back();
+                }
+
+
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+                <button onclick="goBack()">Go Back</button><br>
+                <p id="bc"></p>
+                <h1 id="h1"></h1>
+
+                <div>
+                <form action="review-kpi-profile.html" method="get">
+                    <div id="buttons">
+                        <input id="div" name="div" type="hidden" value="">
+                        <input id="kpi" name="kpi" type="hidden" value="">
+                        <input id="labourProd" name="labourProd" type="hidden" value="">
+                        </fieldset>
+                        <label for="unitOfRef">Unit of reference:</label>
+                        <select name="unitOfRef">
+                                <option value="Kg">Kg</option>
+                                <option value="Litre">Litre</option>
+                                <option value="Units">Units Produced</option>
+                                <option value="m3">m3</option>
+                                <option value="m2">m2</option>
+                                <option value="Hours">Hours</option>
+                                <option value="kWh">kWh</option>
+                                <option value="m">m</option>
+                        </select>
+                    </fieldset>
+                        <br><br>
+                        <label for="smsQuestion">SMS Question:</label>
+                        <select name="smsQuestion">
+                                <option value="What were the latest total hours worked">What were the latest total hours worked?</option>
+                                <option value="What were the total labour hours worked">What were the total labour hours worked?</option>
+                                <option value="This is a reminder to communicate latest total labour hours worked">This is a reminder to communicate latest total labour hours worked.</option>
+                                <option value="Time for report on latest total labour worked">Time for report on latest total labour worked.</option>
+                        </select>
+<br><br>
+                        <label for="reminderFrequence">Reminder frequence:</label>
+                        <select name="reminderFrequence">
+                                <option value="Daily">Daily</option>
+                                <option value="Twice a day">Twice a day</option>
+                                <option value="Weekly">Weekly</option>
+                                <option value="Twice a week">Twice a week</option>
+                                <option value="Monthly">Monthly</option>
+                        </select>
+                        <br><br>
+                        <label for="reminderTime">Time for reminder:</label>
+                        <input type="time" id="appt-time" name="reminderTime"
+                        min="0:00" max="23:59" required value="08:30"/>
+                        <br><br>
+                    
+
+                        <input type="submit" class="f" value="Review">
+                    </div>
+
+
+
+                </form>
+                </div>
+
+        <script>
+        document.getElementById("h1").innerHTML = 'Setting up KPI profile:';
+        document.getElementById("div").innerHTML = "Division: " + div;
+        document.getElementById("bc").innerHTML = div + " / " + kpi + " / " + labourProd;
+        document.getElementById("div").value = div;
+        document.getElementById("kpi").value = kpi;
+        document.getElementById("labourProd").value = labourProd;
+        </script>
+    </body>
+</html>

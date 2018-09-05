@@ -1,0 +1,95 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #556;
+    margin: 0;
+    overflow: hidden;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+      -o-animation: fadein 1s; /* Opera < 12.1 */
+         animation: fadein 1s;
+    color: #333;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 0;
+    margin: 0 auto;
+    padding:20px;
+
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container a, .f {
+    width: 100%;
+    background-color: rgb(50, 126, 107);
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    outline: 0;
+    padding: 10px 20px;
+    text-align: center;
+    line-height: 19px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2em;
+    vertical-align: middle;
+    line-height: 1.5em;
+    margin: 10px 0;
+
+}
+
+.container button:hover {
+    background-color: rgb(252, 164, 132);
+}
+
+form {
+    margin: 0 auto;
+}
+
+#bc {
+    font-style: italic;
+    color: #666;
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 375px;
+        height: 667px;
+
+    }
+}
