@@ -41,7 +41,7 @@ html, body {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     height: 100%;
     background-color: white;
     border: 0;
@@ -71,10 +71,6 @@ html, body {
     line-height: 1.5em;
     margin: 10px 0;
 
-}
-
-.container button:hover {
-    background-color: rgb(252, 164, 132);
 }
 
 form {
