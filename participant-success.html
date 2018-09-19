@@ -1,0 +1,67 @@
+<!DOCTYPE html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Resaka KPI</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script>
+      
+
+      function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+// query string: ?foo=lorem&bar=&baz
+var div = getParameterByName('div'); // "lorem"
+var bar = getParameterByName('bar'); // "" (present with empty value)
+var baz = getParameterByName('baz'); // "" (present with no value)
+var qux = getParameterByName('qux'); // null (absent)
+
+console.log(div);
+
+function goBack() {
+                    window.history.back();
+                }
+
+
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+                <h1>Participant Successfully Added</h1>
+                <br><br><br><br>
+<form action="add-participants.html" method="get">
+    <div id="buttons">
+      <input type="submit" class="f" name="div" value="+ Add another participant?">
+    </div>
+</form>
+<br><br>
+<a href="dashboard.html">Not now. Take me to my Dashboard, please.</a>
+
+
+
+
+                </div>
+
+        <script>
+        document.getElementById("bc").innerHTML = div;
+        document.getElementById("div").value = div;
+        </script>
+    </body>
+</html>

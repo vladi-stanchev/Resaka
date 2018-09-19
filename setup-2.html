@@ -68,7 +68,7 @@ function goBack() {
                         </select>
                     </fieldset>
                         <br><br>
-                        <label for="smsQuestion">SMS Question:</label>
+                        <label for="smsQuestion">Check-up Question:</label>
                         <select name="smsQuestion">
                                 <option value="What were the latest total hours worked">What were the latest total hours worked?</option>
                                 <option value="What were the total labour hours worked">What were the total labour hours worked?</option>
@@ -76,7 +76,11 @@ function goBack() {
                                 <option value="Time for report on latest total labour worked">Time for report on latest total labour worked.</option>
                         </select>
 <br><br>
-                        <label for="reminderFrequence">Reminder frequence:</label>
+                        <label for="reminderTime">Question timing:</label>
+                        <input type="time" id="appt-time" name="reminderTime"
+                        min="0:00" max="23:59" required value="08:30"/>
+                        <br><br>
+                        <label for="reminderFrequence">Question frequency:</label>
                         <select name="reminderFrequence">
                                 <option value="Daily">Daily</option>
                                 <option value="Twice a day">Twice a day</option>
@@ -84,10 +88,7 @@ function goBack() {
                                 <option value="Twice a week">Twice a week</option>
                                 <option value="Monthly">Monthly</option>
                         </select>
-                        <br><br>
-                        <label for="reminderTime">Time for reminder:</label>
-                        <input type="time" id="appt-time" name="reminderTime"
-                        min="0:00" max="23:59" required value="08:30"/>
+                        
                         <br><br>
                     
 
@@ -100,7 +101,7 @@ function goBack() {
                 </div>
 
         <script>
-        document.getElementById("h1").innerHTML = 'Setting up KPI profile:';
+        document.getElementById("h1").innerHTML = 'Performance Indicator:';
         document.getElementById("div").innerHTML = "Division: " + div;
         document.getElementById("bc").innerHTML = div + " / " + kpi + " / " + labourProd;
         document.getElementById("div").value = div;

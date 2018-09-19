@@ -53,7 +53,7 @@ function goBack() {
                 <h1 id="h1"></h1>
 
                 <div>
-                <form action="confirmation.html" method="get">
+                <form action="kpi-success.html" method="get">
                     <div id="buttons">
                         <input id="div" name="div" type="hidden" value="">
                         <input id="kpi" name="kpi" type="hidden" value="">
@@ -85,10 +85,10 @@ function goBack() {
         document.getElementById("kpi").value = kpi;
         document.getElementById("labourProd").value = labourProd;
 
-        document.getElementById("unitOfRef").innerHTML = "Unit of reference: " + unitOfRef;
-        document.getElementById("smsQuestion").innerHTML = "SMS Question: " + smsQuestion + "?";
-        document.getElementById("reminderFrequence").innerHTML = "Reminder frequence: " + reminderFrequence;
-        document.getElementById("reminderTime").innerHTML = "Reminder time: " + reminderTime;
+        document.getElementById("unitOfRef").innerHTML = "Unit of reference: <strong>" + unitOfRef + "</strong>";
+        document.getElementById("smsQuestion").innerHTML = "SMS Question: <br><strong>" + smsQuestion + "?</strong>";
+        document.getElementById("reminderFrequence").innerHTML = "Reminder frequence: <strong>" + reminderFrequence + "</strong>";
+        document.getElementById("reminderTime").innerHTML = "Reminder time: <strong>" + reminderTime + "</strong>";
         </script>
     </body>
 </html>
