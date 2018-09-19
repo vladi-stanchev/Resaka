@@ -3,11 +3,11 @@ html, body {
     background-color: #f5f5f5; /* #556; */
     margin: 0;
     overflow: hidden;
-    -webkit-animation: fadein .8s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein .8s; /* Firefox < 16 */
-     -ms-animation: fadein .8s; /* Internet Explorer */
-      -o-animation: fadein .8s; /* Opera < 12.1 */
-         animation: fadein .8s;
+    -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein .5s; /* Firefox < 16 */
+     -ms-animation: fadein .5s; /* Internet Explorer */
+      -o-animation: fadein .5s; /* Opera < 12.1 */
+         animation: fadein .5s;
     color: #333333;
 }
 
